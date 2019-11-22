@@ -2,9 +2,11 @@ const express = require('express')
 const app = express()
 const knex = require('./knex')
 const bodyParser = require('body-parser')
+var cors = require('cors')
 let port = process.env.PORT || 9000
 
 app.use(bodyParser.json())
+app.use(cors())
 
 app.get('/dogs', (req, res, next) => {
     knex('dog').then(rows => res.json(rows))
