@@ -41,14 +41,16 @@ SERVER SHOULD SAY “HELLO WORLD”
   * Delete staging section
 * touch knex.js
 * In knex.js file, code:
-<details>
-<summary>SEE CODE</summary>
-<p>
+  development: {
+    client: 'pg',
+    connection: 'postgresql://localhost/dog_db'
+  },
+  production: {
+    client: 'pg',
+    connection: process.env.DATABASE_URL
 
-![knexfile](/images/knexfile.png)
-
-</p>
-</details>
+  }
+  
 * In server.js
 * const knex = require(‘./knex’)
 * npm start
