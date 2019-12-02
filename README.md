@@ -50,9 +50,9 @@ SERVER SHOULD SAY “HELLO WORLD”
     connection: process.env.DATABASE_URL
 
   }
-  
+
 * In server.js
-* const knex = require(‘./knex’)
+  * const knex = require(‘./knex’)
 * npm start
 * Server should STILL say “Hello World”
 
