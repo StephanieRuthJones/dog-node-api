@@ -2,23 +2,23 @@
 
 * take dog_app
 * touch server.js
-* npm init -y 
+* npm init -y
 * code .
 * npm install -g nodemon
 * Navigate to package.json file and navigate to “start” and enter “start”: “nodemon server.js”
 nodemon keeps your server running and updates w changes you make (like lite-server)
 * npm install express
 * touch .gitignore
-* echo node_modules >> .gitignore 
+* echo node_modules >> .gitignore
 * Open server.js and code:
-    * const express = require(‘express’)
-    * const app = express()
-    * let port = process.env.PORT || 9000
+  * const express = require(‘express’)
+  * const app = express()
+  * let port = process.env.PORT || 9000
 
-    * app.get(‘/’, (req, res, next) => {
-    res.json(“Hello World”)
-    }
-    * app.listen(‘/’, () => console.log(`listening on port ${port}`)
+  * app.get(‘/’, (req, res, next) => {
+  res.json(“Hello World”)
+   }
+  * app.listen(‘/’, () => console.log(`listening on port ${port}`)
 * npm install body-parser
 * npm install cors
 * npm start
@@ -30,7 +30,7 @@ SERVER SHOULD SAY “HELLO WORLD”
 * npm install knex pg --save
 * knex init
 * In knexfile.js:
-    * Delete staging section
+  * Delete staging section
 * touch knex.js
 * In knex.js file, code:
 
@@ -50,8 +50,8 @@ SERVER SHOULD SAY “HELLO WORLD”
 * knex migrate:make dog
 * Creates a migration file
 * Look in migration file:
-    * exports.up creates a table
-    * exports.down removes table
+  * exports.up creates a table
+  * exports.down removes table
 
 * knex migrate:latest
 * psql dog_db
@@ -59,31 +59,27 @@ SERVER SHOULD SAY “HELLO WORLD”
 * \c to connect to a particular database 
 * !!! to exit 
 * select * from dog;
-    * Nothing in table, don’t forget the semicolon
+  * Nothing in table, don’t forget the semicolon
 
-SEEDS
-knex seed:make dogs
-Will be in seeds directory as dogs.js
-Go to dogs.js file in seeds directory
-Replace table-name with dog
-Change column name to ‘name’
-Add other key value pairs based on table columns previously created
+## SEEDS ##
 
-knex seed:run
-psql dog_db
-select * from dog
-Should see seeded data
-exit
-npm start
-should still see ‘hello world’
+* knex seed:make dogs
+* Go to dogs.js file in seeds directory
+  * Replace table-name with dog
+  * Change column name to ‘name’
+  * Add other key value pairs based on table columns previously created
 
+* knex seed:run
+* psql dog_db
+  * select * from dog
+  * Should see seeded data
+  * exit
+* npm start
+* should still see ‘hello world’
 
-ROUTES
+## ROUTES ##
 
-Create a get route
-
-Create post route
-
-Create delete route
-
-Create update route
+* Create a get route
+* Create post route
+* Create delete route
+* Create update route
