@@ -16,7 +16,7 @@ nodemon keeps your server running and updates w changes you make (like lite-serv
   * let port = process.env.PORT || 9000
 
   * app.get(‘/’, (req, res, next) => {
-  res.json(“Hello World”)
+        res.json(“Hello World”)
    }
   * app.listen(‘/’, () => console.log(`listening on port ${port}`)
 * npm install body-parser
@@ -43,9 +43,8 @@ SERVER SHOULD SAY “HELLO WORLD”
 
 * createdb dog_db
 * psql dog_db
-* \d to see what’s in there
-* Did not find any relations bc nothing is in there yet
-* Relation: 
+  * \d to see what’s in there
+  * Did not find any relations bc nothing is in there yet
 * exit
 * knex migrate:make dog
 * Creates a migration file
