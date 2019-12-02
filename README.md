@@ -80,12 +80,12 @@ SERVER SHOULD SAY “HELLO WORLD”
 <details>
 <summary>SEE CODE</summary>
 <p>
-  exports.up = function (knex) {
-    return knex.schema.createTable('dog', table => {
-        table.increments('id')
-        table.string('name')
-        table.integer('age')
-        table.string('breed')
+  exports.up = function (knex) { <br>
+    return knex.schema.createTable('dog', table => { <br>
+        table.increments('id') <br>
+        table.string('name') <br>
+        table.integer('age') <br>
+        table.string('breed') <br>
     })
   };
   exports.down = function (knex) {
