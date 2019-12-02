@@ -41,6 +41,11 @@ SERVER SHOULD SAY “HELLO WORLD”
   * Delete staging section
 * touch knex.js
 * In knex.js file, code:
+
+<details>
+<summary>SEE CODE</summary>
+<p>
+
   development: {
     client: 'pg',
     connection: 'postgresql://localhost/dog_db'
@@ -50,6 +55,9 @@ SERVER SHOULD SAY “HELLO WORLD”
     connection: process.env.DATABASE_URL
 
   }
+
+</p>
+</details>
 
 * In server.js
   * const knex = require(‘./knex’)
@@ -68,6 +76,24 @@ SERVER SHOULD SAY “HELLO WORLD”
 * Look in migration file:
   * exports.up creates a table
   * exports.down removes table
+
+<details>
+<summary>SEE CODE</summary>
+<p>
+  exports.up = function (knex) {
+    return knex.schema.createTable('dog', table => {
+        table.increments('id')
+        table.string('name')
+        table.integer('age')
+        table.string('breed')
+    })
+  };
+  exports.down = function (knex) {
+    return knex.schema.dropTable('dog')
+  };
+
+</p>
+</details>
 
 * knex migrate:latest
 * psql dog_db
