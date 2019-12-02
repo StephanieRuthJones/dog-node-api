@@ -20,6 +20,7 @@ nodemon keeps your server running and updates w changes you make (like lite-serv
   * app.listen(‘/’, () => console.log(`listening on port ${port}`)
 * npm install body-parser
 * npm install cors
+* npm start
 
 <details>
 <summary>SEE CODE</summary>
@@ -29,7 +30,6 @@ nodemon keeps your server running and updates w changes you make (like lite-serv
 
 </p>
 </details>
-* npm start
 
 SERVER SHOULD SAY “HELLO WORLD”
 
@@ -41,7 +41,14 @@ SERVER SHOULD SAY “HELLO WORLD”
   * Delete staging section
 * touch knex.js
 * In knex.js file, code:
+<details>
+<summary>SEE CODE</summary>
+<p>
 
+![knexfile](/images/knexfile.png)
+
+</p>
+</details>
 * In server.js
 * const knex = require(‘./knex’)
 * npm start
