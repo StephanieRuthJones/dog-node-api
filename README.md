@@ -14,13 +14,21 @@ nodemon keeps your server running and updates w changes you make (like lite-serv
   * const express = require(‘express’)
   * const app = express()
   * let port = process.env.PORT || 9000
-
   * app.get(‘/’, (req, res, next) => {
         res.json(“Hello World”)
    }
   * app.listen(‘/’, () => console.log(`listening on port ${port}`)
 * npm install body-parser
 * npm install cors
+
+<details>
+<summary>SEE CODE</summary>
+<p>
+
+![Install CORS](/images/server.js_setup.png)
+
+</p>
+</details>
 * npm start
 
 SERVER SHOULD SAY “HELLO WORLD”
